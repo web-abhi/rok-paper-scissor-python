@@ -29,19 +29,22 @@ scissors = '''
 #Write your code below this line 👇
 hand = [rock,paper,scissors]
 user = int(input("What do you choose? Type 0 for rock, 1 for Paper, 2 for Scissors.\n"))
-print(hand[user])
-computer = random.randint(0,2)
-print(f"Computer choose:")
-print(hand[computer])
 if user >= 3 or user < 0:
     print("You input invalid number.")
-elif user == 0 and computer == 2:
-    print("You win!")
-elif user == 2 and computer ==0:
-    print("You loose!")
-elif computer > user:
-    print("You loose!")
-elif user > computer:
-    print("You win!")
-elif computer == user:
-    print("Tie")
+else:
+    print(hand[user])
+
+    computer = random.randint(0,2)
+    print(f"Computer choose:")
+    print(hand[computer])
+
+    if user == 0 and computer == 2:
+        print("You win!")
+    elif user == 2 and computer ==0:
+        print("You loose!")
+    elif computer > user:
+        print("You loose!")
+    elif user > computer:
+        print("You win!")
+    elif computer == user:
+        print("Tie")
